@@ -1,4 +1,4 @@
-package main
+package workerpool
 
 import (
 	"fmt"
@@ -60,6 +60,8 @@ type SimplePool struct {
 	// close to signal the workers to stop working
 	quit chan struct{}
 }
+
+var _ Pool = (*SimplePool)(nil)
 
 func (p *SimplePool) Start() {
 	p.start.Do(func() {
