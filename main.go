@@ -14,5 +14,8 @@ func main() {
 	fmt.Println("Synchronization examples")
 
 	sync.Run()
+
 	maps.Run()
+	maps.Run_ReadWrite()
+	maps.Run_Once()
 }
