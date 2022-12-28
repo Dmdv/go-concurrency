@@ -5,5 +5,6 @@ import "fmt"
 func main() {
 	fmt.Println("Worker pools")
 
-	boris()
+	boris_pool()
+	gammazero_pool()
 }

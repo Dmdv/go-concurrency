@@ -7,7 +7,7 @@ import (
 
 // https://codeburst.io/diving-deep-into-the-golang-channels-549fd4ed21a8
 
-func boris() {
+func boris_pool() {
 	var workers = make(chan struct{}, 5)
 	for i := 1; i <= 10; i++ {
 		workers <- struct{}{}
@@ -19,5 +19,6 @@ func boris() {
 			fmt.Println(job)
 		}(i)
 	}
+
 	//time.Sleep(2 * time.Second)
 }
